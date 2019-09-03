@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>addEventListener</title>
+  <style>
+    li {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</body>
+<script>
+  const lis = document.querySelectorAll('li')
+  const ul = document.querySelector('ul')
+  console.log(lis)
+  document.querySelector('ul > li:nth-child(3)').addEventListener('click',() => {
+    alert(3)
+  },false)
+  ul.addEventListener('click',(e) => {
+    console.log(e.target)
+  },true)
+ 
+  // lis.forEach(li => {
+  //   li.addEventListener('click',() => {
+  //     console.log(li.innerHTML)
+  //   },true)
+  // })
+</script>
+</html>
